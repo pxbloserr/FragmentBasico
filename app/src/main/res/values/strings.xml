@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">FragmentBasico</string>
+    <string name="txtIntroduce">Introduce el texto</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="btn_actualizar">Actualizar</string>
+</resources>
