@@ -27,20 +27,23 @@ public class MainActivity extends AppCompatActivity {
         });
 
         Button boton = findViewById(R.id.button);
+
         boton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 EditText ed = findViewById(R.id.editText);
-                TextView tv = findViewById(R.id.texto);
-                tv.setText(ed.getText());
+
+                Bundle bundle = new Bundle();
+                bundle.putString("texto", ed.getText().toString());
 
                 getSupportFragmentManager()
                         .beginTransaction()
                         .setReorderingAllowed(true)
-                        .add(R.id.fragmentContainerView,Fragmento.class, null)
+                        .add(R.id.fragmentContainerView,Fragmento.class, bundle)
                         .commit();
             }
+
         });
 
     }
